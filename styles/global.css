@@ -1,53 +1,66 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Rubik+Moonrocks&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
 }
 
-* {
+:root {
+  --main-dark: #0d0d0d;
+  --body-text: #f5f5f7;
+}
+
+// reset
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ul,
+li {
+  list-style: none;
 }
 
-footer {
+html,
+body {
+  background: var(--main-dark);
+}
+
+.underlined {
+  position: relative;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.underlined:focus {
+  outline: none;
+  text-decoration: none !important;
+}
+
+.underlined:after {
+  content: "";
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+  left: 0;
+  bottom: -4px;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  position: absolute;
 }
 
-footer img {
-  margin-left: 0.5rem;
-}
-
-footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.underlined:hover:after,
+.underlined:focus:after,
+.active.underlined:after {
+  background-color: currentColor;
+  transform: scaleX(1);
 }
