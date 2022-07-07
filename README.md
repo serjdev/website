@@ -1,25 +1,23 @@
-# Next.js + Jest
+# Description
 
-This example shows how to configure Jest to work with Next.js.
+This is my personal website project developed with:
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+[<img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">](LINK)
+[<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">](LINK)
+[<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">](LINK)
 
-## How to Use
+## Actions
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+`yarn dev` - to start the dev server on local machine
+`yarn test` - to run all the Jest tests
 
-In your terminal, run the following command:
+## PR
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
-# or
-pnpm create next-app --example with-jest with-jest-app
-```
+- checkout from main ex. `feat/about-page`
+- PR with screnshoot of the result
 
-## Run Jest Tests
+## Deployment
 
-```bash
-npm test
-```
+In the developing stage every merge in main is reruning a deployment
+
+If you want to see the live version of the site, [click here](https://staging-serj-website.netlify.app/)
