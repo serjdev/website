@@ -1,5 +1,9 @@
 {
-  "private": true,
+  "version": "0.0.1",
+  "author": {
+    "name": "Sergiu Grisca"
+  },
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
