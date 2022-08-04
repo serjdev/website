@@ -32,13 +32,13 @@ export const MobileMenuList = () => {
       {isExpanded ? (
         <MenuPopover
           position={(r) => ({
-            top: `calc(${Number(r?.top) + Number(r?.height)}px + 2rem)`, // 2.25 rem = py-9 from navbar
+            top: `calc(${Number(r?.top) + Number(r?.height)}px + 2rem)`,
             left: 0,
             bottom: 0,
             right: 0,
           })}
           style={{ display: "block" }}
-          className="z-50"
+          className="bg-gradient-to-b from-dark to-transparent z-50"
         >
           <motion.div
             initial={{ y: -50, opacity: 0 }}
@@ -50,7 +50,7 @@ export const MobileMenuList = () => {
             }}
             className="bg-primary dark:border-gray-600 flex flex-col h-full pb-12 overflow-y-scroll border-t border-gray-200"
           >
-            <MenuItems className="px-5 py-2 bg-transparent border-none">
+            <MenuItems className="z-50 px-5 py-6 bg-transparent border-none">
               {LINKS.map((link) => (
                 <MenuLink key={link.to} as={NavLink} href={link.to}>
                   {link.name}

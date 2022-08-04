@@ -4,7 +4,7 @@ import { SocialLink } from "./SocialLink";
 
 export const SocialLinks = () => {
   return (
-    <div className="mt-64">
+    <div className="mt-24">
       {SOCIAL_LINKS.map((link, index) => {
         return (
           <SocialLink

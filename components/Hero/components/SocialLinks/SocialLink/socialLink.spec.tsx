@@ -1,5 +1,5 @@
 import { SocialLink } from "./index";
-import { getByRole, render } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 
 describe("Social Links", () => {
   const dummyLink = {
@@ -13,8 +13,8 @@ describe("Social Links", () => {
   });
 
   it("render a link with anchor tag pointing to url from props", () => {
-    const { getByRole } = render(<SocialLink link={dummyLink} />);
-    expect(getByRole("link")).toHaveAttribute(
+    render(<SocialLink link={dummyLink} />);
+    expect(screen.getByRole("link")).toHaveAttribute(
       "href",
       "https://www.facebook.com/"
     );

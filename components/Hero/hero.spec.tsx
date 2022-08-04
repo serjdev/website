@@ -1,5 +1,5 @@
 import { Hero } from "./index";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 describe("Hero", () => {
   it("renders in the DOM", () => {
@@ -8,7 +8,7 @@ describe("Hero", () => {
   });
 
   it("renders an h1", () => {
-    const { getByRole } = render(<Hero />);
-    expect(getByRole("heading", { level: 1 })).toBeInTheDocument();
+    render(<Hero />);
+    expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
   });
 });
