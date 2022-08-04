@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         bodyText: "#f5f5f7",
-        dark: "0d0d0d",
+        dark: "#0d0d0d",
       },
     },
   },
