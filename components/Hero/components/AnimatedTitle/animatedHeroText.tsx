@@ -7,7 +7,11 @@ const heroText: Array<{ tagName: TagType; text: string }> = [
   { tagName: "h1", text: "Front End Developer" },
   {
     tagName: "p",
-    text: "Hi I am Sergiu, a web developer based in Italy!",
+    text: "Hi I am Sergiu,",
+  },
+  {
+    tagName: "p",
+    text: "a web developer based in Italy!",
   },
 ];
 
