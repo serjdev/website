@@ -7,7 +7,7 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
+    <div className="bg-[url('/bg.jpg')] bg-cover bg-no-repeat min-h-screen">
       <Navbar />
       {children}
     </div>

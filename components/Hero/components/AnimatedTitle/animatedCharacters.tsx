@@ -35,7 +35,7 @@ export const AnimatedCharacters = ({ text, tagName }: AnimatedTitleProps) => {
   return (
     <Tag
       className={clsx({
-        "font-bold text-xl lg:text-4xl": tagName === "h1",
+        "font-bold text-2xl lg:text-4xl mb-6": tagName === "h1",
         "text-lg lg:text-2xl": tagName === "p",
       })}
     >

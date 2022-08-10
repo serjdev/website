@@ -13,6 +13,7 @@
 :root {
   --main-dark: #0d0d0d;
   --body-text: #f5f5f7;
+  --accent: #f6c453;
 }
 
 // reset
@@ -61,6 +62,6 @@ body {
 .underlined:hover:after,
 .underlined:focus:after,
 .active.underlined:after {
-  background-color: currentColor;
+  background-color: var(--accent);
   transform: scaleX(1);
 }
