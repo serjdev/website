@@ -1,20 +1,28 @@
 import { Layout } from "@/components/Layout/Layout";
 import { getAllPaths, getPost } from "blog-api/mdUtils";
+import { IPost } from "blog-api/types";
 
 import React from "react";
+import { Meta } from "seo/Meta/Meta";
 
-const BlogPostsPage = () => {
+const BlogPostsPage = ({ title }: IPost) => {
   return (
-    <Layout>
-      <div className="text-center">Comming soon...</div>
-    </Layout>
+    <>
+      <Meta title={title} description={title} />
+      <Layout>
+        <div className="lg:px-24 px-10">
+          <div className="text-center text-yellow-200">
+            Blog Page In progress...
+          </div>
+          <h1>{title}</h1>
+        </div>
+      </Layout>
+    </>
   );
 };
 
 export const getStaticPaths = async () => {
   const paths = getAllPaths();
-
-  console.log(paths);
 
   return {
     paths,
@@ -33,7 +41,7 @@ export const getStaticProps = async ({ params: { slug } }: IParams) => {
 
   return {
     props: {
-      post,
+      ...post,
     },
   };
 };
