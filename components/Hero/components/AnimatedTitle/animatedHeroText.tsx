@@ -4,7 +4,7 @@ import { AnimatedCharacters } from "./animatedCharacters";
 import { TagType } from "./types";
 
 const heroText: Array<{ tagName: TagType; text: string }> = [
-  { tagName: "h1", text: "Front End Developer" },
+  { tagName: "h1", text: "Front End Development" },
   {
     tagName: "p",
     text: "Hi I am Sergiu,",
