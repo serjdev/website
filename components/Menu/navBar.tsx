@@ -9,7 +9,7 @@ export const Navbar = () => {
       <nav className="text-primary max-w-8xl flex items-center justify-between mx-auto">
         <Link href="/" passHref>
           <a className="underlined text-bodyText whitespace-nowrap lg:text-3xl block text-2xl font-medium">
-            <h1>Sergiu Grisca</h1>
+            <h2>Sergiu Grisca</h2>
           </a>
         </Link>
 
