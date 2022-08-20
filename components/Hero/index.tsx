@@ -18,7 +18,7 @@ export const Hero = () => {
               className="max-w-fit bg-accent px-4 py-2 mt-12 cursor-pointer"
               whileHover={{ scale: 1.1 }}
             >
-              Read Articles
+              Read about Frond End Development
             </motion.a>
           </Link>
           <SocialLinks />
