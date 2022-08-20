@@ -14,27 +14,27 @@ Well... it's not. And this is because stands for Hyper Text Markup Language, so 
 
 ## Why HTML is important ?
 
-To access a website you need to use a web browser, that is retrieving a information from a server and then display's it. HTML comes in place here when the browser needs to know what to display and in wich order.
+To access a website you need to use a web browser, that is retrieving an information from a server and then display's it. HTML comes in place here when the browser needs to know what to display and in which order.
 
-An website made only wiht HTML looks very ugly, but it's a foundation of it, when you have the foundation then you can build other thing upon it using tools like CSS, JavaScript etc.
+A website made only with HTML looks very ugly, but it's a foundation of it, when you have the foundation then you can build other thing upon it using tools like CSS, JavaScript etc.
 
 ## Elements, tags and attributes
 
-An Html element is created by tags , opening tag `<` and closing tag `>`, (there are some elements self clsing ex images `<img />`, `<input />` etc.)
+A HTML element is created by tags , opening tag `<` and closing tag `>`, (there are some elements self closing ex images `<img />`, `<input />` etc.)
 
-Attributes are used to provide aditional information about an HTML element. Some of the elements don't make any sense without attributes. If we return to our image element without a source attribute it will not display anything.
+Attributes are used to provide additional information about an HTML element. Some of the elements don't make any sense without attributes. If we return to our image element without a source attribute, it will not display anything.
 
-So to recap we can look at this code block:
+So to recap, we can look at this code block:
 
 ```
-<div>Text Here </div> // Div element with opening and closing tag
+<div>Text Here </div> // div element with opening and closing tag
 
-<img src='https://image-source.yours'> // Img self element with src attirbute
+<img src='https://image-source.yours'> // img element with src attribute
 ```
 
 ## Where to learn HTML?
 
-Some of great sources I have used to learn HTML are:
+Some of the great sources I have used to learn HTML are:
 
 ### DOCS
 
@@ -51,6 +51,6 @@ Some of great sources I have used to learn HTML are:
 
 ## Conclusion
 
-HTML could be (and should) the first step in your Front End Developer journey. Build a good foundation of your learning with foundamental markup language.
+HTML could be (and should) the first step in your Front End Developer journey. Build a good foundation of your learning with fundamental markup language.
 
-PS: I'm starting my blog journey with this first artcle about HTML hope you liked it
+PS: I'm starting my blog journey with this first article about HTML, hope you liked it.

@@ -1,0 +1,29 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "16x16",
+      "src": "/android-chrome-16x16.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "32x32",
+      "src": "/android-chrome-32x32.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "192x192",
+      "src": "/android-chrome-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/android-chrome-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "Sergiu Grisca Blog",
+  "short_name": "Serj Blog",
+  "theme_color": "#ffffff"
+}
