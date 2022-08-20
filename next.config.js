@@ -3,4 +3,7 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ["source.unsplash.com"],
+  },
 };

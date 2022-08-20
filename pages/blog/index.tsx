@@ -14,10 +14,7 @@ const BlogPostsList = ({ posts }: BlogPostsListProps) => {
     <>
       <Meta title="Sergiu's Blog" description="Sergiu Grisca blog posts page" />
       <Layout>
-        <div className="text-center text-yellow-200">
-          Blog posts list In progress...
-        </div>
-        <div className="lg:px-24 px-10">
+        <div className="lg:px-24 sm:grid-cols-2 lg:grid-cols-4 lg:py-20 grid px-10">
           {posts.map((post) => (
             <BlogPostCard key={post.slug} post={post} />
           ))}

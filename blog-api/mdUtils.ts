@@ -20,6 +20,7 @@ export const getAllPosts = (): Array<ICardPost> => {
       slug,
       title: data.title,
       headerImgId: data.headerImgId,
+      publishedAt: data.publishedAt,
     };
   });
 

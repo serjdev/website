@@ -9,4 +9,5 @@ export interface ICardPost {
   slug: string;
   headerImgId: string;
   title: string;
+  publishedAt: string;
 }
