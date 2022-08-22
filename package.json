@@ -13,10 +13,12 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "@reach/menu-button": "^0.17.0",
     "date-fns": "^2.29.2",
     "framer-motion": "^6.3.16",
     "next": "latest",
+    "next-mdx-remote": "^4.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
