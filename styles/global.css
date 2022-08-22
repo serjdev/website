@@ -33,6 +33,7 @@ li {
 html,
 body {
   background: var(--main-dark);
+  overflow-x: hidden;
 }
 
 .underlined {
