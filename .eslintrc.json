@@ -1,7 +1,12 @@
 {
   "root": true,
   "extends": ["next", "prettier"],
-  "plugins": ["testing-library"],
+  "plugins": [
+    "testing-library",
+    "sort-destructure-keys",
+    "typescript-sort-keys",
+    "postro4no"
+  ],
   "overrides": [
     // Only uses Testing Library lint rules in test files
     {
@@ -10,6 +15,81 @@
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
       "extends": ["plugin:testing-library/react"]
+    },
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": ["airbnb"],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "default-case": "warn",
+        "import/extensions": [
+          "warn",
+          "never",
+          {
+            "svg": "always",
+            "png": "always",
+            "jpg": "always",
+            "jpeg": "always",
+            "css": "always",
+            "scss": "always",
+            "stories": "always"
+          }
+        ],
+        "import/no-duplicates": "warn",
+        "import/no-extraneous-dependencies": [
+          "warn",
+          {
+            "devDependencies": true
+          }
+        ],
+        "jsx-quotes": ["warn", "prefer-single"],
+        "no-param-reassign": [
+          "warn",
+          {
+            "props": true,
+            "ignorePropertyModificationsFor": ["self", "acc"]
+          }
+        ],
+        "postro4no/function-args": "warn",
+        "postro4no/import": "warn",
+        "postro4no/object-props": "warn",
+        "prettier/prettier": "off",
+        "react/prop-types": "off",
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+        "react/jsx-indent": ["warn", 2],
+        "sort-destructure-keys/sort-destructure-keys": [
+          1,
+          { "caseSensitive": false }
+        ],
+        "sort-keys": [
+          "warn",
+          "asc",
+          {
+            "caseSensitive": true,
+            "natural": true
+          }
+        ],
+        "typescript-sort-keys/interface": 1,
+        "typescript-sort-keys/string-enum": 1,
+        "camelcase": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "react/require-default-props": "off",
+        "indent": "off",
+        "no-plusplus": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-vars": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-fragments": "off",
+        "semi": 2,
+        "react/jsx-props-no-spreading": "off"
+      }
     }
-  ]
+  ],
+  "env": {
+    "jest": true
+  },
+  "globals": {
+    "JSX": true
+  }
 }
