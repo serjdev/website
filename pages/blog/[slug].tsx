@@ -1,44 +1,32 @@
-import { Layout } from "@/components/Layout/Layout";
-import { getAllPaths, getPost } from "blog-api/mdUtils";
-import { IPost } from "blog-api/types";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import Image from "next/image";
-import { ArrowLeftIcon } from "@heroicons/react/solid";
+import { Layout } from '@/components/Layout/Layout';
+import { getAllPaths, getPost } from 'blog-api/mdUtils';
+import { IPost } from 'blog-api/types';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { ArrowLeftIcon } from '@heroicons/react/solid';
 
-import React from "react";
-import { Meta } from "seo/Meta/Meta";
-import { UNSPLASH_IMG_URL } from "data";
-import Link from "next/link";
+import React from 'react';
+import { Meta } from 'seo/Meta/Meta';
+import Link from 'next/link';
 
 interface BlogPageProps {
-  post: IPost;
   mdx: MDXRemoteSerializeResult;
+  post: IPost;
 }
 
-const BlogPostsPage = ({
-  mdx,
-  post: { title, headerImgId },
-}: BlogPageProps) => {
+function BlogPostsPage({ mdx, post: { title } }: BlogPageProps) {
   return (
     <>
       <Meta title={title} description={title} />
-      <Layout>
-        <div className="py-12">
-          <Image
-            src={`${UNSPLASH_IMG_URL}/${headerImgId}`}
-            alt="alt"
-            width={350}
-            height={100}
-            layout="responsive"
-          />
-          <div className="lg:px-24 lg:py-12 bg-black/75 max-w-none rounded-b-xl lg:prose-xl px-12 prose">
+      <Layout noImage>
+        <div className='py-12'>
+          <div className='lg:px-64 lg:py-12 max-w-none rounded-b-xl lg:prose-xl px-12 prose'>
             <h1>{title}</h1>
             <MDXRemote {...mdx} />
           </div>
-          <Link href="/blog">
-            <div className="hover:text-accent lg:px-24 flex items-center px-12 mt-10 text-white transition-colors cursor-pointer">
-              <ArrowLeftIcon className="w-8 h-8 mr-3" />
+          <Link href='/blog'>
+            <div className='hover:text-accent lg:px-24 flex items-center px-12 mt-10 text-white transition-colors cursor-pointer'>
+              <ArrowLeftIcon className='w-8 h-8 mr-3' />
               <span>back</span>
             </div>
           </Link>
@@ -46,14 +34,14 @@ const BlogPostsPage = ({
       </Layout>
     </>
   );
-};
+}
 
 export const getStaticPaths = async () => {
   const paths = getAllPaths();
 
   return {
-    paths,
     fallback: false,
+    paths,
   };
 };
 
@@ -69,8 +57,8 @@ export const getStaticProps = async ({ params: { slug } }: IParams) => {
 
   return {
     props: {
-      post,
       mdx: mdxSource,
+      post,
     },
   };
 };

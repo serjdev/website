@@ -1,29 +1,27 @@
-import { NextRouter } from "next/router";
+import { NextRouter } from 'next/router';
 
-export const mockNextRouter = (router: Partial<NextRouter>): NextRouter => {
-  return {
-    basePath: "",
-    pathname: "/",
-    route: "/",
-    query: {},
-    asPath: "/",
+export const mockNextRouter = (router: Partial<NextRouter>): NextRouter => ({
+    asPath: '/',
     back: jest.fn(),
+    basePath: '',
     beforePopState: jest.fn(),
-    prefetch: jest.fn(),
-    push: jest.fn(),
-    reload: jest.fn(),
-    replace: jest.fn(),
+    defaultLocale: 'en',
+    domainLocales: [],
     events: {
-      on: jest.fn(),
-      off: jest.fn(),
       emit: jest.fn(),
+      off: jest.fn(),
+      on: jest.fn(),
     },
     isFallback: false,
     isLocaleDomain: false,
-    isReady: true,
-    defaultLocale: "en",
-    domainLocales: [],
     isPreview: false,
+    isReady: true,
+    pathname: '/',
+    prefetch: jest.fn(),
+    push: jest.fn(),
+    query: {},
+    reload: jest.fn(),
+    replace: jest.fn(),
+    route: '/',
     ...router,
-  };
-};
+  });
