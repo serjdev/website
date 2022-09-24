@@ -8,7 +8,7 @@ tags:
   - react
   - html
   - front end development
-  _ accessability
+  - accessability
 ---
 
 We live in a world that is full of illness, unfortunately. But at the same time we want to care for all people, and we want to develop applications and websites that can be accesed by all. So to achieve this goal the accesible design comes in place.
