@@ -12,9 +12,9 @@ export default function Projects() {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Projects
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          {/* <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             Showcase your projects with a hero image (16 x 9)
-          </p>
+          </p> */}
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
@@ -27,6 +27,8 @@ export default function Projects() {
                 href={d.href}
               />
             ))}
+            I am working on a very interesting projects on my full time job, I will add some of my
+            personal projects here for the time being this section is under construction...
           </div>
         </div>
       </div>
