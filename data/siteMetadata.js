@@ -13,7 +13,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 's.grisca@gmail.com',
+  email: 'sirioja92@gmail.com',
   github: 'https://github.com/Serj10GR',
   twitter: 'https://twitter.com/SergiuGrisca',
   facebook: 'https://www.facebook.com/sergiu.grisca.1',
@@ -25,7 +25,7 @@ const siteMetadata = {
     // supports plausible, simpleAnalytics, umami or googleAnalytics
     plausibleDataDomain: 'https://serjdev.com/',
     simpleAnalytics: false, // true or false
-    googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+    googleAnalyticsId: 'G-EV8RZ0YJFY',
   },
 }
 
