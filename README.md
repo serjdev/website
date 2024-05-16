@@ -103,7 +103,7 @@ Thanks to the community of users and contributors to the template! We are no lon
 - [raphaelchelly.com](https://www.raphaelchelly.com/) - Raphaël Chelly's personal website and blog ([source code](https://github.com/raphaelchelly/raph_www))
 - [kaveh.page](https://kaveh.page) - Kaveh Tehrani's personal blog. Added tags directory, profile card, time-to-read on posts directory, etc.
 - [drakerossman.com](https://drakerossman.com/) - Drake Rossman's blog about NixOS, Rust, Software Architecture and Engineering Management, as well as general musings.
-  
+
 ## Motivation
 
 I wanted to port my existing blog to Nextjs and Tailwind CSS but there was no easy out of the box template to use so I decided to create one. Design is adapted from [Tailwindlabs blog](https://github.com/tailwindlabs/blog.tailwindcss.com).
@@ -235,7 +235,6 @@ Please refer to `contentlayer.config.ts` for an up to date list of supported fie
 ```
 title (required)
 date (required)
-tags (optional)
 lastmod (optional)
 draft (optional)
 summary (optional)
@@ -252,7 +251,6 @@ Here's an example of a post's frontmatter:
 title: 'Introducing Tailwind Nexjs Starter Blog'
 date: '2021-01-12'
 lastmod: '2021-01-18'
-tags: ['next-js', 'tailwind', 'guide']
 draft: false
 summary: 'Looking for a performant, out of the box template, with all the best in web technology to support your blogging needs? Checkout the Tailwind Nextjs Starter Blog template.'
 images: ['/static/images/canada/mountains.jpg', '/static/images/canada/toronto.jpg']
