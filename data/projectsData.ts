@@ -1,20 +1,17 @@
-const projectsData = [
-  // {
-  //   title: 'A Search Engine',
-  //   description: `What if you could look up any information in the world? Webpages, images, videos
-  //   and more. Google has many features to help you find exactly what you're looking
-  //   for.`,
-  //   imgSrc: '/static/images/google.png',
-  //   href: 'https://www.google.com',
-  // },
-  // {
-  //   title: 'The Time Machine',
-  //   description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-  //   to the desired date and press "Go". No more worrying about lost keys or
-  //   forgotten headphones with this simple yet affordable solution.`,
-  //   imgSrc: '/static/images/time-machine.jpg',
-  //   href: '/blog/the-time-machine',
-  // },
+interface Project {
+  title: string
+  description: string
+  href?: string
+  imgSrc?: string
+}
+
+const projectsData: Project[] = [
+  {
+    title: 'Dr Servizi',
+    description: `This project involved creating a simple presentation website for a local business. The primary goal was to showcase the various services offered by the business and to attract new clients.`,
+    imgSrc: '/static/images/dr-servizi.png',
+    href: 'https://servizidr.it',
+  },
 ]
 
 export default projectsData
