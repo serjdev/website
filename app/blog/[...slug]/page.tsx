@@ -1,7 +1,6 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
-import PageTitle from '@/components/PageTitle'
 import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
@@ -44,11 +43,11 @@ export async function generateMetadata({
   if (post.images) {
     imageList = typeof post.images === 'string' ? [post.images] : post.images
   }
-  const ogImages = imageList.map((img) => {
-    return {
-      url: img.includes('http') ? img : siteMetadata.siteUrl + img,
-    }
-  })
+  // const ogImages = imageList.map((img) => {
+  //   return {
+  //     url: img?.includes('http') ? img : siteMetadata.siteUrl + img,
+  //   }
+  // })
 
   return {
     title: post.title,
@@ -62,7 +61,7 @@ export async function generateMetadata({
       publishedTime: publishedAt,
       modifiedTime: modifiedAt,
       url: './',
-      images: ogImages,
+      images: [],
       authors: authors.length > 0 ? authors : [siteMetadata.author],
     },
     twitter: {
