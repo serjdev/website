@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://www.serjdev.com/',
   siteRepo: 'https://github.com/Serj10GR/website',
   siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
+  // socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'sergiu.grisca.jr@gmail.com',
   github: 'https://github.com/Serj10GR',
