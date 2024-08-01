@@ -12,6 +12,12 @@ const projectsData: Project[] = [
     imgSrc: '/static/images/dr-servizi.png',
     href: 'https://servizidr.it',
   },
+  {
+    title: 'Gio Pitture',
+    description: `This project involved integrating a Design with content from CMS. This way the site owner can always add new photos or services and edit old ones. To achieve this I used DatoCms with next.js`,
+    imgSrc: '/static/images/gio-pitture.png',
+    href: 'https://giopitture.it',
+  },
 ]
 
 export default projectsData

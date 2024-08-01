@@ -1,0 +1,81 @@
+---
+title: 'How to use an API'
+date: '2024-08-01'
+draft: true
+summary: 'API - just three letters, but theese letters are moving the modern days internet. In this article we will discuss what is an API and how to use it'
+---
+
+## What is an API?
+
+API stands for:
+
+- Application - refers to any software with a distinct function.
+- Programming - the process of creating a set of instructions that tell a computer how to perform a task.
+- Interface - provides ways to interact with some object, by providing a level of abstraction over the implementation.
+
+An API allows different software applications to communicate with each other. It defines the kinds of calls or requests that can be made, how to make them, the data formats that should be used, and the conventions to follow. Essentially, it is a set of rules and protocols for building and interacting with software applications. APIs enable the integration of various services and allow them to work together seamlessly.
+
+## RESTful APIs
+
+Because APIs are so powerful and often remote, to be easily used by others, they need some standards to be respected. Here, the term REST (Representational State Transfer) comes into the show. REST is an architectural style for designing networked applications. It relies on a stateless, client-server, cacheable communications protocol -- the HTTP. RESTful applications use HTTP requests to perform CRUD (Create, Read, Update, Delete) operations, commonly using JSON (JavaScript Object Notation) to format data.
+
+## How to use an API
+
+Using an API typically involves making a request to a server and handling the response. Here’s a step-by-step guide on how to use a RESTful API with examples in JavaScript:
+
+    1. Find the API Documentation: Before using an API, locate its documentation. This provides details on the API’s endpoints, request methods, parameters, and response formats. For this example, let's use the JSONPlaceholder API, a fake online REST API for testing and prototyping.
+
+    2. Make a GET Request: Use the fetch API to make a GET request to the API. Here’s an example of fetching a list of posts:
+
+    ```JavaScript
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(posts => {
+      posts.forEach(post => {
+        console.log(`Title: ${post.title}\nBody: ${post.body}\n`);
+     });
+    })
+    .catch(error => console.error('Error:', error));
+
+````
+
+    3.Handling Parameters: If the API requires parameters, you can include them in your request. For example, to fetch a specific post by ID:
+
+    ```JavaScript
+    const postId = 1;
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    .then(response => response.json())
+    .then(post => {
+       console.log(`Title: ${post.title}\nBody: ${post.body}`);
+     })
+    .catch(error => console.error('Error:', error));
+```
+
+    4. Making POST Requests: To create a new resource, you can make a POST request. Here’s how to create a new post:
+
+    ```JavaScript
+    const newPost = {
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    };
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newPost)
+    })
+    .then(response => response.json())
+    .then(createdPost => {
+      console.log(`Created Post ID: ${createdPost.id}\nTitle: ${createdPost.title}\nBody: ${createdPost.body}`);
+    })
+    .catch(error => console.error('Error:', error));
+```
+
+
+## Conclusion
+
+APIs are the backbone of modern web development, enabling different software systems to communicate and share data seamlessly. Understanding how to use an API is a crucial skill for developers. By following the API documentation and using the fetch method in JavaScript, you can interact with various APIs to retrieve, create, and manipulate data efficiently.
+````
